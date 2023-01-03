@@ -1,45 +1,69 @@
 using System;
 
-class Program
+namespace Prep2
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.Write("What is your grade percentage? ");
-        string answer = Console.ReadLine();
-        int percent = int.Parse(answer);
+        static void Main(string[] args)
+        {
+            Console.Write("What is your grade percent? ");
+            string answer = Console.ReadLine();
+            int percent = int.Parse(answer);
+            
+            // ""= null
+            string letter = null;
 
-        string letter = "";
 
-        if (percent >= 90)
-        {
-            letter = "A";
-        }
-        else if (percent >= 80)
-        {
-            letter = "B";
-        }
-        else if (percent >= 70)
-        {
-            letter = "C";
-        }
-        else if (percent >= 60)
-        {
-            letter = "D";
-        }
-        else
-        {
-            letter = "F";
-        }
+            if (percent >= 90) {
+                letter = "A";
+            }
+            else if (percent >= 80) {
+                letter = "B";
+            }
+            else if (percent>= 70) {
+                letter = "C";
+            }
+            else if (percent >= 60) {
+                letter = "D";
+            }
+            else {
+                letter = "F";
+            }
 
-        Console.WriteLine($"Your grade is: {letter}");
-        
-        if (percent >= 70)
-        {
-            Console.WriteLine("You passed!");
-        }
-        else
-        {
-            Console.WriteLine("Better luck next time!");
+            // Stretch Challenge 1
+            
+            int last_digit = percent % (10);
+            // "" = null
+            string sign = null;  
+
+            if (last_digit >= 7) {
+                sign = "+";
+            }
+            else if (last_digit < 3) {
+                sign = "-";
+            }
+            else {
+                sign = "";
+            }
+            // Stretch Challenge 2
+
+            if (percent >= 93) {
+                sign = "";
+            }
+
+            //Stretch Challenge 3
+            if (answer == "F") {
+                sign = "";
+            }
+
+            Console.WriteLine($"Your letter grade is: {letter}{sign}");
+
+            if (percent >= 70) {
+                Console.WriteLine("Congratulations! You passed the class!");
+            }
+            else {
+                Console.WriteLine("Stay focused and you'll get it next time!");
+            }
         }
     }
 }
