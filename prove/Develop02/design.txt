@@ -1,0 +1,38 @@
+
+
+    Journal: The Journal display method could iterate through all Entry objects and call the Entry display method
+    Entry: It's main responsibility is to hold data.
+    PromptGenerator: Generate prompts
+
+
+
+Journal: 
+
+    _entries: List<Entry> // List of the entries we have.
+    _file: string // File where we are going to be saving the Journal/entries.
+
+    Write() : void // Write a new entry in the journal.
+    Display(): void // Show the Journal / the list of entries.
+    SaveToFile() : void // save the journal into the file.
+    LoadFromFile(): void // load the journal from the file.
+
+
+Entry:
+
+    _prompt: string // The prompt that is part of the entry.
+    _answer: string // the answer from the user.
+    _date: string // the date that the user writes the entry.
+
+    Display(): void // show the entry.
+
+
+PromptGenerator:
+
+    _prompts : List<string> // for Exceeding Requirements, we add the option to add and delete new prompts to the journal and this is the list of prompts.
+    _file: string // the file where we are going to find the prompts.
+
+    Random(): string // get a random prompt.
+    Delete() : void // delete a prompt.
+    Write() : void // write a new prompt.
+    SaveToFile() : void // save the prompt into the file.
+    LoadFromFile() : void // load the prompts from the file.
