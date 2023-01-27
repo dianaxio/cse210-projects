@@ -8,11 +8,10 @@ using System;
     between the questions and the answers
     
     I used this webpage to know about how to handle the FileNotFoundException: 
-    https://rollbar.com/blog/csharp-filenotfoundexception/#:~:text=One%20of%20the%20most%20commonly,mismatch%20in%20the%20file%20name.
+    https://www.educba.com/c-sharp-filenotfoundexception/
     
-    I used this webpage to know how to clear a list in c#: 
-    https://www.techiedelight.com/es/delete-all-items-from-a-list-in-csharp/#:~:text=Una%20soluci%C3%B3n%20simple%20y%20directa,Clear()%20m%C3%A9todo. 
-*/
+    I used this webpage to know how to clear a list: 
+    https://www.tutorialkart.com/c-sharp-tutorial/c-sharp-list-clear/*/
 
 class Program
 {
